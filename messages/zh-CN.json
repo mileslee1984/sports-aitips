@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "home": "首页",
+    "platforms": "平台评测",
+    "sports": "即时比分",
+    "tips": "AI 推荐"
+  },
+  "home": {
+    "hero_title": "智慧投注，从这里开始",
+    "hero_subtitle": "AI 赔率预测、即时比分、顶级加密博彩平台评测，一站搞定。",
+    "section_platforms": "精选博彩平台",
+    "section_sports": "即时比分与赔率",
+    "section_tips": "今日 AI 推荐",
+    "view_all": "查看全部"
+  },
+  "platforms": {
+    "title": "最佳加密货币博彩平台",
+    "subtitle": "由专业团队评测排名，每月更新。",
+    "visit": "前往官网",
+    "review": "查看评测",
+    "bonus": "优惠",
+    "rating": "评分"
+  },
+  "sports": {
+    "title": "即时比分与赔率",
+    "subtitle": "来自顶级博彩公司的即时比分与赔率。",
+    "no_matches": "目前没有进行中的赛事。",
+    "odds": "赔率",
+    "score": "比分"
+  },
+  "tips": {
+    "title": "AI 投注推荐",
+    "subtitle": "通过 AI 分析数据、趋势与赔率，每日生成预测。",
+    "confidence": "信心指数",
+    "generated": "由 AI 生成",
+    "disclaimer": "仅供娱乐参考，请理性投注。"
+  }
+}
