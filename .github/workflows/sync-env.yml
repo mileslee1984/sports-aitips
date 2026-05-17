@@ -1,0 +1,33 @@
+name: Sync Env Vars to Zeabur
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sync-env.yml'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set ODDS_API_KEY in Zeabur
+        run: |
+          curl -s -X POST https://gateway.zeabur.com/graphql \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${{ secrets.ZEABUR_TOKEN }}" \
+            -d '{
+              "query": "mutation { addEnvironmentVariable(serviceID: \"service-6a097da61985c8ed80e2aa52\", key: \"ODDS_API_KEY\", value: \"${{ secrets.ODDS_API_KEY }}\") }"
+            }'
+
+      - name: Set RAPIDAPI_KEY in Zeabur
+        run: |
+          curl -s -X POST https://gateway.zeabur.com/graphql \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${{ secrets.ZEABUR_TOKEN }}" \
+            -d '{
+              "query": "mutation { addEnvironmentVariable(serviceID: \"service-6a097da61985c8ed80e2aa52\", key: \"RAPIDAPI_KEY\", value: \"${{ secrets.RAPIDAPI_KEY }}\") }"
+            }'
+
+      - name: Done
+        run: echo "✅ Environment variables synced to Zeabur"
